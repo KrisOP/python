@@ -1,4 +1,4 @@
-miDiccionario={"Alemania":"Berlin", "Francia":"paris","Nicaragua":"Managua"}
+"""miDiccionario={"Alemania":"Berlin", "Francia":"paris","Nicaragua":"Managua"}#declaracion de diccionarios
 
 print(miDiccionario["Nicaragua"])#imprimir datos del diccionario usando las claves
 
@@ -12,4 +12,8 @@ print (miDiccionario)
 
 del miDiccionario["Francia"] #eliminar elemento del diccionario con la clave
 
+print (miDiccionario)"""
+
+miDiccionario ={"Alemania":"Berlin", 22:"Kris","ortega":12}
 print (miDiccionario)
+print (miDiccionario[22])
