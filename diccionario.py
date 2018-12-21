@@ -31,3 +31,6 @@ miDiccionario={23:"Jordan", "nombre":"Jordan","equipo":"chicago", "anillos":{"te
 
 print (miDiccionario["anillos"])
 
+print(miDiccionario.keys())#devuelve toddas las claves del diccionario
+print(miDiccionario.values())#devuelve todos los valores sin claves
+print(len(miDiccionario))#devuelve la longitud del diccionario
