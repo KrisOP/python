@@ -5,8 +5,7 @@ print (hermanos)
 salario_anual=int(input("Introduce el salario Anual"))
 print(salario_anual)
 
-if distancia>40 and hermanos>2 and salario_anual<=2000:
+if distancia>40 and hermanos>2 or salario_anual<=20000:
     print("Se le puede otorgar beca")
 else:
     print("No se le puede otorgar ninguna beca")
-    
