@@ -3,4 +3,10 @@ for i in ["Primavera","verano","otonio","invierno"]:
 
 
 for i in "krisortega15@hotmail.es":#recorre caracter a caracter 
-    print ("caracteres")    
+    if (i=="@"):
+        email=True    
+
+if email==True:
+    print ("Es un correo valido")
+else:
+    print("EL correo no es valido")
