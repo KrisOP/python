@@ -1,8 +1,9 @@
-i=1
+edad=int(input("Introduce la edad: "))
 
-while i<=10:
-   # print (f"Hola {i}")
-    print ("Hola "+str(i))
-    i=i+1
+while edad<5 or edad >100:
+    print ("Vuelve a introducir la edad, la anterior es incorrecta")
+    edad= int(input("Intodude la edad: "))
 
-print("termino la ejecucion")
+
+print("Fin del programa. Puede avanzar")
+
