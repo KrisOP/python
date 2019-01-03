@@ -20,3 +20,17 @@ print(contador)
 
 class miClase:
     pass#es una clase nula"""
+
+
+##FUNCION ELSE
+
+email=input("introduce tu email")
+
+for i in email:
+    if i=="@":
+        arroba=True
+        break
+else:
+    arroba=False
+
+print (arroba)
