@@ -1,6 +1,8 @@
 def devuelve_ciudades(*ciudades):#el asteristicos indica que recibira un numero indeterminado de elementos
+    #accediendo a letra por letra del primer elemento de la lista
     for elemento in ciudades:
-        yield elemento
+        for subElemento in elemento:
+            yield subElemento
 
 ciudades_devuelve=devuelve_ciudades("Madrid", "Managua", "Esteli", "Boaco")
 
