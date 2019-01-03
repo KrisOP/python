@@ -14,3 +14,9 @@ for i in nombre:
     contador+=1
 
 print(contador)
+
+
+"""##FUNCION PASS, DEVUELVE NULL
+
+class miClase:
+    pass#es una clase nula"""
