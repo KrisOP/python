@@ -6,7 +6,7 @@ def resta(num1, num2):
 
 def multiplica(num1, num2):
 	return num1*num2
-
+############################EXCEPCIONES####################
 def divide(num1,num2):
     try:#captura o control de excepcion, para que las siguientes lineas de codigos se ejecuten
 	    return num1/num2
@@ -16,9 +16,13 @@ def divide(num1,num2):
         return "operacion erronea"
 	
 
-op1=(int(input("Introduce el primer número: ")))
-
-op2=(int(input("Introduce el segundo número: ")))		
+while True:#bucle infinito
+    try:
+        op1=(int(input("Introduce el primer número: ")))
+        op2=(int(input("Introduce el segundo número: ")))
+        break#se ejecuta break si los valores son correctos
+    except ValueError:
+        print("Los valores introducidos no son correctos. Intentalo de Nuevo")		
 	
 operacion=input("Introduce la operación a realizar (suma,resta,multiplica,divide): ")
 
