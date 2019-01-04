@@ -1,3 +1,5 @@
+import math
+
 def evalueEdad(edad):
 
     if edad<0:
@@ -13,4 +15,20 @@ def evalueEdad(edad):
     elif edad<100:
         print("cuidate... estas anciano")
 
-print (evalueEdad(-18))#evitar que la edad no puede ser negativa
+#llamada a la funcion evalueEdad
+#print (evalueEdad(-18))#evitar que la edad no puede ser negativa
+
+##nuevo uso de lanzamiento propio de excepciones
+
+def calcularRaiz(num1):
+    if num1<0:
+        raise ValueError ("El numero no puede ser negativo")
+    else:
+        return math.sqrt(num1)
+op1=int(input("ingrese el numero"))
+try:
+    print (calcularRaiz(op1))
+except ValueError as ErrordeNumerNegativo:#agregamos un alias a error para identificarlo mejor
+    print (ErrordeNumerNegativo)
+
+print ("programa terminado")
