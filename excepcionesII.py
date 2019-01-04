@@ -8,7 +8,8 @@ def divide():
         print ("El valor introducido es erroneo")
     except ZeroDivisionError:
         print ("No se puede dividir entre 0")
-    finally:
+    finally:#todo lo que esta dentro de finally siempre se va a ejecutar, tanto haya o no error
+        
         print("calculo finalizadoo")
 
 divide()
