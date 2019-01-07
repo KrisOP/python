@@ -4,8 +4,20 @@ class Coche():
     ruedas=4
     enmarcha=False
     
-    def arrancar(self): #el self viene siendo igual al this en otros lenguajes
-        pass
+    #declaracion de metodo no de funcion. (Las funciones no pertenecen a clases, los metodos si)
+    def arrancar(self): #el self viene siendo igual al this en otros lenguajes##recibe como parametro al propio objeto#es decir miCoche.enmarcha=True
+       self.enmarcha=True 
+    def estado(self):
+        if(self.enmarcha):
+            return "el coche esta en marcha"
+        else:
+            return "el coche esta detenido"
 
 
 miCoche=Coche()#instanciando clase
+
+print ("El largo del coche es: ", miCoche.largoChasis)
+print ("El coche tiene: ",miCoche.ruedas, "ruedas")
+miCoche.arrancar()##llamada al metodo
+
+print (miCoche.estado())
