@@ -6,3 +6,6 @@ class Coche():
     
     def arrancar(self): #el self viene siendo igual al this en otros lenguajes
         pass
+
+
+miCoche=Coche()#instanciando clase
