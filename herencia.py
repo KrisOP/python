@@ -16,3 +16,8 @@ class Vehiculos():
 
     def esttado(self):
         print ("marca: ", self.marca, "\nModelo:", self.modelo,"\nEn marcha: ",self.enmarcha, "\nAcelerando: ",self.acelera, "\nFrenando:",self.frena)
+
+class Moto (Vehiculos):#la clase moto hereda de la clase vehiculos
+    pass
+
+miMoto=()
