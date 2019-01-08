@@ -11,7 +11,7 @@ class Coche():
        self.__enmarcha=arrancamos
 
        if (self.__enmarcha):
-           chequeo=self.chequeo_interno()
+           chequeo=self.__chequeo_interno()
 
        if(self.__enmarcha and chequeo):
           return "el coche esta en marcha"
@@ -24,7 +24,7 @@ class Coche():
 
         print ("el coche tiene ", self.__ruedas, "ruedas. Un ancho de ", self.__anchoChasis, "y un largo de ", self.__largoChasis)
 
-    def chequeo_interno(self):
+    def __chequeo_interno(self):##encapsulando metodos//solo se puede acceder al metodo dentro de la clase
         print ("realizando chequeo interno")
         self.gasolina="ok"
         self.aceite="ok"
