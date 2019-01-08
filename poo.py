@@ -1,8 +1,8 @@
 class Coche():
 
     def __init__(self):#constructor de la clase (estado inicial de la clase)
-        self.largoChasis=250
-        self.anchoChasis=120
+        self.__largoChasis=250
+        self.__anchoChasis=120
         self.__ruedas=4 #encapsulando la variable rueda//NO PUEDE SER ACCESIBLE DESDE FUERA DE LA CLASE(MODIFICAR)
         self.enmarcha=False
     
@@ -18,13 +18,13 @@ class Coche():
 
     def estado(self):
 
-        print ("el coche tiene ", self.ruedas, "ruedas. Un ancho de ", self.anchoChasis, "y un largo de ", self.largoChasis)
+        print ("el coche tiene ", self.__ruedas, "ruedas. Un ancho de ", self.__anchoChasis, "y un largo de ", self.__largoChasis)
 
 
 miCoche=Coche()#instanciando clase
 
-print ("El largo del coche es: ", miCoche.largoChasis)
-print ("El coche tiene: ",miCoche.ruedas, "ruedas")
+#print ("El largo del coche es: ", miCoche.largoChasis)
+#print ("El coche tiene: ",miCoche.__ruedas, "ruedas")
 print(miCoche.arrancar(True))##llamada al metodo
 
 miCoche.estado()
@@ -33,8 +33,8 @@ miCoche.estado()
 print("***************a continuacion creamos el segundo objeto*********************")
 
 miCoche2=Coche()
-print ("El largo del coche es: ", miCoche.largoChasis)
-print ("El coche tiene: ",miCoche.ruedas, "ruedas")
+#print ("El largo del coche es: ", miCoche.largoChasis)
+#print ("El coche tiene: ",miCoche.ruedas, "ruedas")#SI ESTA ENCAPSULADO EL ATRIBUTO NO PODEMOS LLAMARLO DESDE FUERA DE LA CLASE
 print(miCoche2.arrancar(False))
-miCoche2.ruedas=2
+miCoche2.ruedas=2#NO SE MODIFICA PORQUE ESTA FUERA DE LA CLASE
 miCoche2.estado()
