@@ -4,22 +4,36 @@ class Coche():
         self.__largoChasis=250
         self.__anchoChasis=120
         self.__ruedas=4 #encapsulando la variable rueda//NO PUEDE SER ACCESIBLE DESDE FUERA DE LA CLASE(MODIFICAR)
-        self.enmarcha=False
+        self.__enmarcha=False
     
     #declaracion de metodo no de funcion. (Las funciones no pertenecen a clases, los metodos si)
     def arrancar(self,arrancamos): #el self viene siendo igual al this en otros lenguajes##recibe como parametro al propio objeto#es decir miCoche.enmarcha=True
-       self.enmarcha=arrancamos 
-       if(self.enmarcha):
+       self.__enmarcha=arrancamos
+
+       if (self.__enmarcha):
+           chequeo=self.chequeo_interno()
+
+       if(self.__enmarcha and chequeo):
           return "el coche esta en marcha"
+       elif (self.__enmarcha and chequeo==False):
+           return "algo ha ido mal en el chequeo, no podemos arrancar"
        else:
             return "el coche esta detenido"
-
-
 
     def estado(self):
 
         print ("el coche tiene ", self.__ruedas, "ruedas. Un ancho de ", self.__anchoChasis, "y un largo de ", self.__largoChasis)
 
+    def chequeo_interno(self):
+        print ("realizando chequeo interno")
+        self.gasolina="ok"
+        self.aceite="ok"
+        self.puertas="cerradas"
+
+        if (self.gasolina=="ok" and self.aceite=="ok" and self.puertas=="cerradas"):
+            return True
+        else:
+            return False
 
 miCoche=Coche()#instanciando clase
 
@@ -36,5 +50,5 @@ miCoche2=Coche()
 #print ("El largo del coche es: ", miCoche.largoChasis)
 #print ("El coche tiene: ",miCoche.ruedas, "ruedas")#SI ESTA ENCAPSULADO EL ATRIBUTO NO PODEMOS LLAMARLO DESDE FUERA DE LA CLASE
 print(miCoche2.arrancar(False))
-miCoche2.ruedas=2#NO SE MODIFICA PORQUE ESTA FUERA DE LA CLASE
+#miCoche2.ruedas=2#NO SE MODIFICA PORQUE ESTA FUERA DE LA CLASE
 miCoche2.estado()
