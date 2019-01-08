@@ -21,3 +21,12 @@ print ("El coche tiene: ",miCoche.ruedas, "ruedas")
 miCoche.arrancar()##llamada al metodo
 
 print (miCoche.estado())
+
+
+print("***************a continuacion creamos el segundo objeto*********************")
+
+miCoche2=Coche()
+print ("El largo del coche es: ", miCoche.largoChasis)
+print ("El coche tiene: ",miCoche.ruedas, "ruedas")
+
+print (miCoche2.estado())
