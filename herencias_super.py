@@ -10,11 +10,13 @@ class Persona():
         print ("nombre: ", self.nombre, "Edad: ",self.edad, "Residencia: ",self.lugar_residencia)
 
 class empleado(Persona):#hereda de la clase persona
-    def __init__(self, salario, antiguedad):
+    def __init__(self, salario, antiguedad,nombre_empleado, edad_empleado,residencia_empleado):
+
+        super().__init__(nombre_empleado, edad_empleado, residencia_empleado)##llama al metodo init de la clase padre
 
         self.salario=salario
         self.antiguedad=antiguedad
     
-    Antonio=Persona("Antonio", 55, "Nicaragua")
+Kris=empleado(1500,15,"Kris",22, "Nicaragua")
 
-    Antonio.descripcion()
+Kris.descripcion()
