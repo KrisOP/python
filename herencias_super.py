@@ -24,3 +24,5 @@ class empleado(Persona):#hereda de la clase persona
 Kris=empleado(1500,15,"Kris",22, "Nicaragua")
 
 Kris.descripcion()
+
+print (isinstance(Kris,Persona))#Manuel es de la clase empleado
