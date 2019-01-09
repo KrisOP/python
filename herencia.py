@@ -37,11 +37,11 @@ class Moto (Vehiculos):#la clase moto hereda de la clase vehiculos
         print ("marca: ", self.marca, "\nModelo:", self.modelo,"\nEn marcha: ",self.enmarcha, "\nAcelerando: ",self.acelera, "\nFrenando:",self.frena, "\nActividad especial:", self.hcaballito)
 
 
-    class VElectricos():
-        def__init__(self):
-            self.autonomia=100
-        def cargarEnergia(self):
-            self.cargando=True
+class VElectricos():
+    def __init__(self):
+       self.autonomia=100
+   def cargarEnergia(self):
+       self.cargando=True
 
 
 
@@ -58,3 +58,8 @@ miFurgoneta=Furgoneta("Renault", "Kangoo")
 miFurgoneta.arrancar()
 miFurgoneta.estado()
 print (miFurgoneta.carga(True))
+
+
+class BicicletaElectrica(VElectricos,Vehiculos):#herencia de clases multiples
+    pass
+
