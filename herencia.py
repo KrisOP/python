@@ -35,11 +35,22 @@ class Moto (Vehiculos):#la clase moto hereda de la clase vehiculos
         self.hcaballito="haciendo el caballito"
     def estado(self):
         print ("marca: ", self.marca, "\nModelo:", self.modelo,"\nEn marcha: ",self.enmarcha, "\nAcelerando: ",self.acelera, "\nFrenando:",self.frena, "\nActividad especial:", self.hcaballito)
+
+
+    class VElectricos():
+        def__init__(self):
+            self.autonomia=100
+        def cargarEnergia(self):
+            self.cargando=True
+
+
+
+
+#INSTANCIA DE LA CLASE MOTO
+
 miMoto=Moto("Honda", "CRB")
 miMoto.caballito()
 miMoto.estado()#se ejecuta el metodo estado de la clase moto (es decir, sobreescribe el metodo de la clase padre)
-
-
 
 #INSTANCIA DE LA CLASE FURGONETA
 miFurgoneta=Furgoneta("Renault", "Kangoo")
