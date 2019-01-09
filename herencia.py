@@ -40,8 +40,9 @@ class Moto (Vehiculos):#la clase moto hereda de la clase vehiculos
 class VElectricos():
     def __init__(self):
        self.autonomia=100
-   def cargarEnergia(self):
-       self.cargando=True
+
+    def cargarEnergia(self):
+         self.cargando=True
 
 
 
@@ -62,4 +63,9 @@ print (miFurgoneta.carga(True))
 
 class BicicletaElectrica(VElectricos,Vehiculos):#herencia de clases multiples
     pass
+
+#INSTANCIA DE BICICLETAS ELECTRICAS
+
+#se da prioridad a la primera clase que hereda que indicamos al declarar la clase
+miBici=BicicletaElectrica()
 
