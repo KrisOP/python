@@ -18,7 +18,13 @@ class Vehiculos():
         print ("marca: ", self.marca, "\nModelo:", self.modelo,"\nEn marcha: ",self.enmarcha, "\nAcelerando: ",self.acelera, "\nFrenando:",self.frena)
 
 class Moto (Vehiculos):#la clase moto hereda de la clase vehiculos
-    pass
+    ##ESTA CLASE TIENE 5 METODOS, 4 HEREDADOS Y UNO DEFINIDO DENTRO
+    hcaballito=""
+    def caballito (self):
+        hcaballito="voy a hacer el caballito"
+
+
+
 
 miMoto=Moto("Honda", "CRB")
 miMoto.estado()
