@@ -11,7 +11,16 @@ class Camion():
         print ("me desplazo utilizando 6 ruedas")
 
 
-miVehiculo=Moto()
+
+#################USO DE POLIMORFISMO##################
+def desplazamientoVehiculo(Vehiculo):
+    Vehiculo.desplazamiento()
+
+miVehiculo=Coche()
+
+desplazamientoVehiculo(miVehiculo)
+
+"""miVehiculo=Moto()
 
 miVehiculo.desplazamiento()
 
@@ -21,4 +30,4 @@ miVehiculo2.desplazamiento()
 
 miVehiculo3=Camion()
 
-miVehiculo3.desplazamiento()
+miVehiculo3.desplazamiento()"""
