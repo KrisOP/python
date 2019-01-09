@@ -17,14 +17,33 @@ class Vehiculos():
     def estado(self):
         print ("marca: ", self.marca, "\nModelo:", self.modelo,"\nEn marcha: ",self.enmarcha, "\nAcelerando: ",self.acelera, "\nFrenando:",self.frena)
 
+
+class Furgoneta (Vehiculos):
+    def carga (self,cargar):
+        self.cargado=cargar
+        if (self.cargado):
+            return "la furgoneta esta cargada"
+        else:
+            return "la furgoneta no esta cargada"
+
+
+
 class Moto (Vehiculos):#la clase moto hereda de la clase vehiculos
     ##ESTA CLASE TIENE 5 METODOS, 4 HEREDADOS Y UNO DEFINIDO DENTRO
     hcaballito=""
     def caballito (self):
-        hcaballito="voy a hacer el caballito"
-
-
-
-
+        self.hcaballito="haciendo el caballito"
+    def estado(self):
+        print ("marca: ", self.marca, "\nModelo:", self.modelo,"\nEn marcha: ",self.enmarcha, "\nAcelerando: ",self.acelera, "\nFrenando:",self.frena, "\nActividad especial:", self.hcaballito)
 miMoto=Moto("Honda", "CRB")
-miMoto.estado()
+miMoto.caballito()
+miMoto.estado()#se ejecuta el metodo estado de la clase moto (es decir, sobreescribe el metodo de la clase padre)
+
+
+
+#INSTANCIA DE LA CLASE FURGONETA
+miFurgoneta=Furgoneta("Renault", "Kangoo")
+
+miFurgoneta.arrancar()
+miFurgoneta.estado()
+print (miFurgoneta.carga(True))
