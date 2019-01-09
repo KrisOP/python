@@ -16,6 +16,10 @@ class empleado(Persona):#hereda de la clase persona
 
         self.salario=salario
         self.antiguedad=antiguedad
+    def descripcion (self):
+        super().descripcion()
+        print ("\n El salario: ",self.salario, "\nLa antiguedad",self.antiguedad)
+        # print ("nombre: ", self.nombre, "Edad: ",self.edad, "Residencia: ",self.lugar_residencia)
     
 Kris=empleado(1500,15,"Kris",22, "Nicaragua")
 
