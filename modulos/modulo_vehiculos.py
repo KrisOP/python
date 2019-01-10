@@ -48,25 +48,3 @@ class VElectricos(Vehiculos):
 
 
 
-#INSTANCIA DE LA CLASE MOTO
-
-miMoto=Moto("Honda", "CRB")
-miMoto.caballito()
-miMoto.estado()#se ejecuta el metodo estado de la clase moto (es decir, sobreescribe el metodo de la clase padre)
-
-#INSTANCIA DE LA CLASE FURGONETA
-miFurgoneta=Furgoneta("Renault", "Kangoo")
-
-miFurgoneta.arrancar()
-miFurgoneta.estado()
-print (miFurgoneta.carga(True))
-
-
-class BicicletaElectrica(VElectricos,Vehiculos):#herencia de clases multiples
-    pass
-
-#INSTANCIA DE BICICLETAS ELECTRICAS
-
-#se da prioridad a la primera clase que hereda que indicamos al declarar la clase
-miBici=BicicletaElectrica("orbea","hj")
-
