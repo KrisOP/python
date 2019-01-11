@@ -12,7 +12,7 @@ archivo_texto.write(frase)#escribir en el archivo
 archivo_texto.close()#despues de escribir en el archivo cerrar abierto en memoria
 """
 
-#r >> modo escritura
+#r >> modo escritura// si queremos de lectura y escritura usamos r+ como segundo parametro
 archivo_texto=open("archivo.txt","r")#dos argumentos 1>el nombre del archivos 2>el modo (lectura o escritura o append<para agregar informarcion al archivo que ya existe y que tambien ya tiene informacion>)
 
 #texto=archivo_texto.read()#abrir el archivo y leer el contenido y almacenarlo en texto
