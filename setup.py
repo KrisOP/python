@@ -10,7 +10,7 @@ setup(
     descripcion="Paquete de redondeo y potencia",
     author="Kristopher Ortega",
     author_email="krisortega15@hotmail.es",
-    url="kris.com"
+    url="kris.com",
     packages=["Calculos","Calculos.redondeo_potencia"]#indicar la ruta donde se encuentra el paquete Calculos
 
     )
