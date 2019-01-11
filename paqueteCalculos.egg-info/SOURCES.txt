@@ -1,0 +1,9 @@
+setup.py
+Calculos/__init__.py
+Calculos/calculosGenerales.py
+Calculos/redondeo_potencia/RedondeoyPotencia.py
+Calculos/redondeo_potencia/__init__.py
+paqueteCalculos.egg-info/PKG-INFO
+paqueteCalculos.egg-info/SOURCES.txt
+paqueteCalculos.egg-info/dependency_links.txt
+paqueteCalculos.egg-info/top_level.txt
