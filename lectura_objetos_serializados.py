@@ -1,7 +1,5 @@
 import pickle
 
-
-
 class Vehiculos():
     def __init__(self,marca,modelo):
         self.marca=marca
@@ -21,19 +19,11 @@ class Vehiculos():
     def estado(self):
         print ("marca: ", self.marca, "\nModelo:", self.modelo,"\nEn marcha: ",self.enmarcha, "\nAcelerando: ",self.acelera, "\nFrenando:",self.frena)
 
+ficheroApertura=open("losCoches","rb")#lectura de bytes
 
-coche1=Vehiculos("Mazda", "MX5")
-coche2=Vehiculos("Seat", "Leon")
-coche3=Vehiculos("Mercedes", "Berlina")
+misCoches=pickle.load(ficheroApertura)
 
+ficheroApertura.close()
 
-coches=[coche1,coche2,coche3]
-
-fichero=open("losCoches","wb")#crear un fichero externo con permisos de escritura en binario
-
-pickle.dump(coches,fichero)
-
-fichero.close()#cerrar fichero de memoria
-
-del (fichero)#borrar fihero de memoria, NO DE DISCO DURO
-
+for c in misCoches:
+    print(c.estado())
