@@ -36,3 +36,14 @@ pickle.dump(coches,fichero)
 fichero.close()#cerrar fichero de memoria
 
 del (fichero)#borrar fihero de memoria, NO DE DISCO DURO
+
+ficheroApertura=open("losCoches","rb")#lectura de bytes
+
+misCoches=pickle.load(ficheroApertura)
+
+ficheroApertura.close()
+
+
+
+for c in misCoches:
+    print(c.estado())
