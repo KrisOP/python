@@ -22,4 +22,6 @@ miFrame.config(width="650",height="350")
 
 miFrame.config(relief="groove")
 miFrame.config(bd=35)
+
+miFrame.config(cursor="pirate")#combiando el cursor al pasar por el frame
 raiz.mainloop()#mainloop es equivalent a un ciclo infinito para mantener la interfaz en continua ejecucion
