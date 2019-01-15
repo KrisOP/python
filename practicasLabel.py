@@ -8,5 +8,5 @@ miFrame.pack()
 
 miLabel=Label(miFrame,text="Hola Mundo xD")
 
-miLabel.pack()
+miLabel.place(x=100,y=200)
 root.mainloop()
