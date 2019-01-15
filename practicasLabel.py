@@ -6,7 +6,7 @@ miFrame=Frame(root,width=500, height=400)
 
 miFrame.pack()
 
-miLabel=Label(miFrame,text="Hola Mundo xD")
+miLabel=Label(miFrame,text="Hola Mundo xD").place(x=100,y=200)
 
-miLabel.place(x=100,y=200)
+#miLabel.place(x=100,y=200)
 root.mainloop()
