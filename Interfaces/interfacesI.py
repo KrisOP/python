@@ -13,7 +13,8 @@ raiz.config(bg="blue")#cambiar el color de fondo de la pantalla
 
 miFrame=Frame() # construir un frame
 #miFrame.pack(fill="x")#redimencionando horizontalmente
-miFrame.pack(fill="y",expand="true")#redimencionando verticalmente
+#miFrame.pack(fill="y",expand="true")#redimencionando verticalmente
+miFrame.pack(fill="both",expand="true")#redimencionando en toda la raiz
 
 #miFrame.pack(side="right", anchor="n")#empaquetar el frame para que este en el interior de la raiz//al redimencionar se ancla en la parte derecha y arriba
 miFrame.config(bg="red")
