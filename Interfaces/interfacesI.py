@@ -12,7 +12,9 @@ raiz.iconbitmap(r'C:\Users\KrisOP\Desktop\Phyton\Interfaces\ff.ico')#agregar ico
 raiz.config(bg="blue")#cambiar el color de fondo de la pantalla
 
 miFrame=Frame() # construir un frame
-miFrame.pack(fill="x")#redimencionando horizontalmente
+#miFrame.pack(fill="x")#redimencionando horizontalmente
+miFrame.pack(fill="y",expand="true")#redimencionando verticalmente
+
 #miFrame.pack(side="right", anchor="n")#empaquetar el frame para que este en el interior de la raiz//al redimencionar se ancla en la parte derecha y arriba
 miFrame.config(bg="red")
 miFrame.config(width="650",height="350")
