@@ -33,7 +33,9 @@ cuadroDireccion.config(fg="red",justify="center")
 
 ComentariosLabel=Label(miFrame,text="Comentarios: ")
 ComentariosLabel.grid(row=4,column=0,sticky="e",padx=10,pady=10)
-
 textoComentario=Text(miFrame, width=16, height=5)#definiendo un objeto text para comentarios
 textoComentario.grid(row=4,column=1,padx=10,pady=10)
+scrollVert=Scrollbar(miFrame,command=textoComentario.yview)#construyendo un scroll bar
+scrollVert.grid(row=4,column=2, sticky="nsew")#ubicando el scroll bar, nsew que se redimencione al tamanio del cuadro 
+textoComentario.config(yscrollcommand=scrollVert.set)#indicar el posicionador en todo momento dentro del widgets text
 raiz.mainloop()
