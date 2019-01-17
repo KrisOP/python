@@ -14,7 +14,7 @@ cuadroNombre.config(fg="red",justify="center")#el color de la letra rojo al escr
 
 ContraLabel=Label(miFrame,text="Contrasenia: ")
 ContraLabel.grid(row=1,column=0,sticky="e",padx=10,pady=10)
-cuadroContra=Entry(miFrame)
+cuadroContra=Entry(miFrame)#cuadro de texto 
 cuadroContra.grid(row=1,column=1)
 cuadroContra.config(show="*",fg="red",justify="center")
 
@@ -30,4 +30,10 @@ cuadroDireccion=Entry(miFrame)
 cuadroDireccion.grid(row=3,column=1)
 cuadroDireccion.config(fg="red",justify="center")
 
+
+ComentariosLabel=Label(miFrame,text="Comentarios: ")
+ComentariosLabel.grid(row=4,column=0,sticky="e",padx=10,pady=10)
+
+textoComentario=Text(miFrame, width=16, height=5)#definiendo un objeto text para comentarios
+textoComentario.grid(row=4,column=1,padx=10,pady=10)
 raiz.mainloop()
