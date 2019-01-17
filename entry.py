@@ -6,9 +6,11 @@ raiz=Tk()
 miFrame=Frame(raiz,width=1200,height=600)
 miFrame.pack()
 
+minombre=StringVar()#con esta funcion se dice que se trata de una cadena de caracteres
+
 nombreLabel=Label(miFrame,text="Nombre: ")
 nombreLabel.grid(row=0,column=0,sticky="e",padx=10,pady=10)#sticky es para ubicar el label al este
-cuadroNombre=Entry(miFrame)
+cuadroNombre=Entry(miFrame,textvariable=minombre)#este cuadro esta asociado al valor de la variable "minombre"
 cuadroNombre.grid(row=0,column=1)#dividir el frame en celdas con columnas y filas para ubicar el entry
 cuadroNombre.config(fg="red",justify="center")#el color de la letra rojo al escribir en el cuadro y este centrado
 
@@ -39,7 +41,9 @@ scrollVert=Scrollbar(miFrame,command=textoComentario.yview)#construyendo un scro
 scrollVert.grid(row=4,column=2, sticky="nsew")#ubicando el scroll bar, nsew que se redimencione al tamanio del cuadro 
 textoComentario.config(yscrollcommand=scrollVert.set)#indicar el posicionador en todo momento dentro del widgets text
 
+def codigoBoton():
+    minombre.set("Kris")
 
-botonEnvio=Button(raiz,text="enviar")
+botonEnvio=Button(raiz,text="enviar", command=codigoBoton)#creando boto, y con command se refiere que al dar clivk al boton ejecute la ufuncioon "codigo boton"
 botonEnvio.pack()
 raiz.mainloop()
