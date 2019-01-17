@@ -38,4 +38,8 @@ textoComentario.grid(row=4,column=1,padx=10,pady=10)
 scrollVert=Scrollbar(miFrame,command=textoComentario.yview)#construyendo un scroll bar
 scrollVert.grid(row=4,column=2, sticky="nsew")#ubicando el scroll bar, nsew que se redimencione al tamanio del cuadro 
 textoComentario.config(yscrollcommand=scrollVert.set)#indicar el posicionador en todo momento dentro del widgets text
+
+
+botonEnvio=Button(raiz,text="enviar")
+botonEnvio.pack()
 raiz.mainloop()
