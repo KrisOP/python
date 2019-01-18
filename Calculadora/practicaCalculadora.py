@@ -12,8 +12,8 @@ pantalla.grid(row=1,column=1, padx=10,pady=10,columnspan=4)#columnspan para que 
 pantalla.config(background="black",fg="#03f943",justify="right" )#fg color de letra, justify para ubicar posicion del cursor al escribir en el cuadro de texto
 
 #***************PULSACIONES TECLADO*****************
-def numeroPulsado():
-    numeroPantalla.set(numeroPantalla.get()+ "4")
+def numeroPulsado(num):
+    numeroPantalla.set(numeroPantalla.get()+ num)#concatenar lo que existe en el campo con la variable
 
 
 #***************FILA 1**************************
@@ -33,7 +33,8 @@ botonDiv.grid(row=2,column=4)
 
 #***************FILA 2**************************
 
-boton4=Button(miFrame,text=4,width=3,command=numeroPulsado)#ancho de 3, llamada a la funcion numeroPulsado
+#Lambda para funciones anonimas
+boton4=Button(miFrame,text=4,width=3,command=lambda:numeroPulsado("4"))#ancho de 3, llamada a la funcion numeroPulsado, con lambda evitamos que se ejecute la funcion sino hasta que se pulse el boton  
 boton4.grid(row=3,column=1)
 
 boton5=Button(miFrame,text="5",width=3)
