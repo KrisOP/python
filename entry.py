@@ -6,6 +6,8 @@ raiz=Tk()
 miFrame=Frame(raiz,width=1200,height=600)
 miFrame.pack()
 
+operacion=""
+
 minombre=StringVar()#con esta funcion se dice que se trata de una cadena de caracteres
 
 nombreLabel=Label(miFrame,text="Nombre: ")

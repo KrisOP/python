@@ -4,6 +4,8 @@ raiz=Tk()
 
 miFrame=Frame(raiz)
 miFrame.pack()
+operacion=""
+resultado=0
 #***************PANTALLA************************
 numeroPantalla=StringVar()
 
@@ -13,7 +15,26 @@ pantalla.config(background="black",fg="#03f943",justify="right" )#fg color de le
 
 #***************PULSACIONES TECLADO*****************
 def numeroPulsado(num):
-    numeroPantalla.set(numeroPantalla.get()+ num)#concatenar lo que existe en el campo con la variable
+    
+    global operacion
+
+    if operacion!="":
+        numeroPantalla.set(num)#si se ha pulsado suma, no concatenar, lo unico solo escribir el nuevo numero
+        operacion=""
+    else:
+        numeroPantalla.set(numeroPantalla.get()+ num)#concatenar lo que existe en el campo con la variable
+
+#****************FUNCION SUMA***********************
+def suma(num):
+    global operacion
+    global resultado
+
+    resultado+=int(num)#convirtiendo string en decimal
+    operacion="suma"
+
+    numeroPantalla.set(resultado)
+
+
 
 
 #***************FILA 1**************************
@@ -72,6 +93,6 @@ boton0.grid(row=5,column=2)
 botonComa=Button(miFrame,text=",",width=3,command=lambda:numeroPulsado(","))
 botonComa.grid(row=5,column=3)
 
-botonsuma=Button(miFrame,text="+",width=3)
+botonsuma=Button(miFrame,text="+",width=3,command=lambda:suma(numeroPantalla.get()))
 botonsuma.grid(row=5,column=4)
 raiz.mainloop()
