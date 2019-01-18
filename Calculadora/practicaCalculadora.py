@@ -34,6 +34,13 @@ def suma(num):
 
     numeroPantalla.set(resultado)
 
+#*******************FUNCION el_resultado*******************
+def el_resultado():
+    global resultado
+
+    numeroPantalla.set(resultado+int(numeroPantalla.get()))
+    resultado=0
+
 
 
 
@@ -84,7 +91,7 @@ botonMulti.grid(row=4,column=4)
 
 #***************FILA 4**************************
 
-botonigual=Button(miFrame,text="=",width=3)#ancho de 3
+botonigual=Button(miFrame,text="=",width=3,command=lambda:el_resultado())#ancho de 3
 botonigual.grid(row=5,column=1)
 
 boton0=Button(miFrame,text="0",width=3,command=lambda:numeroPulsado("0"))
