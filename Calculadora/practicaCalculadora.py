@@ -5,15 +5,22 @@ raiz=Tk()
 miFrame=Frame(raiz)
 miFrame.pack()
 #***************PANTALLA************************
-pantalla=Entry(miFrame)
+numeroPantalla=StringVar()
+
+pantalla=Entry(miFrame,textvariable=numeroPantalla)#asociando variable a la pantalla
 pantalla.grid(row=1,column=1, padx=10,pady=10,columnspan=4)#columnspan para que el cuadro ocupe cuatro columnas
 pantalla.config(background="black",fg="#03f943",justify="right" )#fg color de letra, justify para ubicar posicion del cursor al escribir en el cuadro de texto
+
+#***************PULSACIONES TECLADO*****************
+def numeroPulsado():
+    numeroPantalla.set(numeroPantalla.get()+ "4")
 
 
 #***************FILA 1**************************
 
 boton9=Button(miFrame,text="9",width=3)#ancho de 3
 boton9.grid(row=2,column=1)
+
 
 boton8=Button(miFrame,text="8",width=3)
 boton8.grid(row=2,column=2)
@@ -26,7 +33,7 @@ botonDiv.grid(row=2,column=4)
 
 #***************FILA 2**************************
 
-boton4=Button(miFrame,text=4,width=3)#ancho de 3
+boton4=Button(miFrame,text=4,width=3,command=numeroPulsado)#ancho de 3, llamada a la funcion numeroPulsado
 boton4.grid(row=3,column=1)
 
 boton5=Button(miFrame,text="5",width=3)
