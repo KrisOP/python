@@ -11,7 +11,14 @@ def infoAdicional():
 def avisoLicencia():
     messagebox.showwarning("Licencia", "producto bajo licencia GNU")
 
+def avisoSalir():
+    #valor=messagebox.askquestion("Salir", "Deseas salir de la Aplicacion?")#devuelve un valor de yes o no
+    valor=messagebox.askokcancel("Salir", "Deseas salir de la Aplicacion?")#devuelve un valor de true o false
 
+    #if valor=="yes":#SI USAMOS askquestion
+        #root.destroy()#cerrar la aplicacion
+    if valor==True:#SI USAMOS askquestion
+        root.destroy()#cerrar la aplicacion    
 
 barraMenu=Menu(root)
 root.config(menu=barraMenu,width=300,height=300)
@@ -22,7 +29,7 @@ archivoMenu.add_command(label="Guardar")
 archivoMenu.add_command(label="Guardar Como")
 archivoMenu.add_separator()#agregar una linea separadora
 archivoMenu.add_command(label="Cerrar")
-archivoMenu.add_command(label="Salir")
+archivoMenu.add_command(label="Salir",command=avisoSalir)
 
 archivoEdicion=Menu(barraMenu,tearoff=0)
 archivoEdicion.add_command(label="Copiar")
