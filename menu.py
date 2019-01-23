@@ -5,7 +5,12 @@ root=Tk()
 barraMenu=Menu(root)
 root.config(menu=barraMenu,width=300,height=300)
 
-archivoMenu=Menu(barraMenu)#opciones del menu
+archivoMenu=Menu(barraMenu,tearoff=0)#opciones del menu
+archivoMenu.add_command(label="Nuevo")#opciones secundarias
+archivoMenu.add_command(label="Guardar")
+archivoMenu.add_command(label="Guardar Como")
+archivoMenu.add_command(label="Salir")
+
 archivoEdicion=Menu(barraMenu)
 archivoHerramienta=Menu(barraMenu)
 archivoAyuda=Menu(barraMenu)
