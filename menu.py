@@ -7,6 +7,10 @@ root=Tk()
 def infoAdicional():
     messagebox.showinfo("KrisOP", "Limpieza de Datos 2019")#ventana emergente
 
+#funcion para llamada a ventana de advertencia
+def avisoLicencia():
+    messagebox.showwarning("Licencia", "producto bajo licencia GNU")
+
 
 
 barraMenu=Menu(root)
@@ -28,7 +32,7 @@ archivoEdicion.add_command(label="Pegar")
 archivoHerramienta=Menu(barraMenu,tearoff=0)
 
 archivoAyuda=Menu(barraMenu,tearoff=0)
-archivoAyuda.add_command(label="Licencia")
+archivoAyuda.add_command(label="Licencia",command=avisoLicencia)
 archivoAyuda.add_command(label="Acerca de...",command=infoAdicional)
 
 barraMenu.add_cascade(label="Archivo",menu=archivoMenu)#la opcion archivoMenu (el elemento) tendra el nombre "archivo"
