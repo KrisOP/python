@@ -1,6 +1,13 @@
 from tkinter import *
+from tkinter import messagebox
 
 root=Tk()
+
+#funcion para llamada a ventana emergente
+def infoAdicional():
+    messagebox.showinfo("KrisOP", "Limpieza de Datos 2019")#ventana emergente
+
+
 
 barraMenu=Menu(root)
 root.config(menu=barraMenu,width=300,height=300)
@@ -22,7 +29,7 @@ archivoHerramienta=Menu(barraMenu,tearoff=0)
 
 archivoAyuda=Menu(barraMenu,tearoff=0)
 archivoAyuda.add_command(label="Licencia")
-archivoAyuda.add_command(label="Acerca de...")
+archivoAyuda.add_command(label="Acerca de...",command=infoAdicional)
 
 barraMenu.add_cascade(label="Archivo",menu=archivoMenu)#la opcion archivoMenu (el elemento) tendra el nombre "archivo"
 barraMenu.add_cascade(label="Edicion",menu=archivoEdicion)
