@@ -18,7 +18,13 @@ def avisoSalir():
     #if valor=="yes":#SI USAMOS askquestion
         #root.destroy()#cerrar la aplicacion
     if valor==True:#SI USAMOS askquestion
-        root.destroy()#cerrar la aplicacion    
+        root.destroy()#cerrar la aplicacion 
+#ventana emergente de reintento de cierre de aplicacion
+def cerrarDocumento():
+    valor=messagebox.askretrycancel("Reintentar", "No es posible cerrar documento. Docuemnto bloqueado")#devuelve true o false    
+    if valor==False:
+        root.destroy()
+    #else:
 
 barraMenu=Menu(root)
 root.config(menu=barraMenu,width=300,height=300)
@@ -28,7 +34,7 @@ archivoMenu.add_command(label="Nuevo")#opciones secundarias
 archivoMenu.add_command(label="Guardar")
 archivoMenu.add_command(label="Guardar Como")
 archivoMenu.add_separator()#agregar una linea separadora
-archivoMenu.add_command(label="Cerrar")
+archivoMenu.add_command(label="Cerrar",command=cerrarDocumento)
 archivoMenu.add_command(label="Salir",command=avisoSalir)
 
 archivoEdicion=Menu(barraMenu,tearoff=0)
