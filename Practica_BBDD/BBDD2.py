@@ -6,7 +6,7 @@ miCursor=miConexion.cursor()
 
 miCursor.execute(''' 
                     CREATE TABLE PRODUCTOS (
-                    CODIGO_ARTICULO VARVHAR (4) PRIMARY KEY,
+                    ID INTEGER PRIMARY KEY AUTOINCREMENT,
                     NOMBRE_ARTICULO VARCHAR (50),
                     PRECIO INTEGER,
                     SECCION VARCHAR(20)) 
