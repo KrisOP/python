@@ -15,8 +15,12 @@ variosProductos=[
     ("Jarron",10,"Ceramica")
 ]
 
-miCursor.executemany("INSERT INTO PRODUCTOS VALUES (?,?,?)",variosProductos)##ejecuta muchos
+#miCursor.executemany("INSERT INTO PRODUCTOS VALUES (?,?,?)",variosProductos)##ejecuta muchos
+miCursor.execute("SELECT * FROM PRODUCTOS")
 
+listadeProductos=miCursor.fetchall()#devuelve una lista al ejecutar la consulta y alamacenarla en la variable
+print(listadeProductos)
+miConexion.commit()
 
 miConexion.commit()#confirmar cambios hechos a la base de datos
 miConexion.close()#cerrar la conexion
