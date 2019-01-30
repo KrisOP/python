@@ -13,12 +13,12 @@ miCursor.execute('''
 ''')
 
 productos=[
-    ("AR01","pelota",20,"jugueteria"),
-    ("AR02","pantalon",15,"confeccion"),
-    ("AR03","destornillador",25,"ferreteria")
+    ("pelota",20,"jugueteria"),
+    ("pantalon",15,"confeccion"),
+    ("destornillador",25,"ferreteria")
 ]
 
-miCursor.executemany("INSERT INTO PRODUCTOS VALUES (?,?,?,?)",productos)
+miCursor.executemany("INSERT INTO PRODUCTOS VALUES (null,?,?,?)",productos)
 
 miConexion.commit()#confirmar cambios hechos en base de datos
 miConexion.close()
